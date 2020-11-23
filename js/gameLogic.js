@@ -51,9 +51,10 @@ function displayWin() {
 }
 
 
-function displayDeath() {
+function displayDeath(deathText) {
   document.getElementById("mainPanel").classList.add("uk-hidden");
   document.getElementById("death").classList.remove("uk-hidden");
+  document.getElementById("deathtext").innerHTML = deathText;
 }
 
 
@@ -61,12 +62,12 @@ function gameLogic(choice) {
   console.log(choice);
   //MAKE SURE PHRASES ARE LOWERCASE
   const victoryPhrases = ["run towards the light"]
-  const deathPhrases = ["drop your weapon"];
+  const deathPhrases = {"drop your weapon": "The guard attacked and you were defenseless, refresh to start"};
   var txt = document.getElementById(choice).innerText.toLowerCase();
   if (victoryPhrases.includes(txt)) {
     displayWin();
-  } else if (deathPhrases.includes(txt)) {
-    displayDeath();
+  } else if (txt in deathPhrases) {
+    displayDeath(deathPhrases[txt]);
   } else {
     updateCard(flowChart[txt]);
   }
