@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prison Escape</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+    </head>
+    <!--TODO: Add Nav and Progress Bar-->
+    <body>
+        <!-- Starting Text-->
+        <div id="startingText" class="uk-cover-container uk-padding-remove uk-background-muted uk-height-viewport">
+            <div class="uk-text-lead uk-position-center">
+                Choose Wisely for Your Freedom
+            </div>
+        </div>
+           
+        
+        <!--Panel for Choices-->
+        
+        <div id ="mainPanel" class="uk-flex uk-flex-column uk-position-center uk-hidden"> 
+            <div class="uk-card uk-card-default uk-card-large uk-card-body">
+                <h3 id ="prompt" class="uk-card-title">Large</h3>
+                <div class="uk-flex uk-flex-column">
+                    <button id="choice1" class="uk-button uk-button-default uk-margin-bottom"></button>
+                    <button id="choice2" class="uk-button uk-button-default"></button>
+                    <button id="choice3" class="uk-button uk-button-default uk-margin-top"></button>
+                </div>
+            </div>
+        
+        </div>
+
+
+        <div id="endingText" class="uk-cover-container uk-padding-remove uk-background-muted uk-height-viewport uk-hidden">
+            <div class="uk-text-lead uk-position-center">
+                Congrats, you won!
+            </div>
+        </div>
+
+        <div id="death" class="uk-cover-container uk-padding-remove uk-background-muted uk-height-viewport uk-hidden">
+            <div class="uk-text-lead uk-position-center">
+                The guard shot you, refresh the page to start over.
+            </div>
+        </div>
+
+
+    </body>
+    <script src="js/gameLogic.js"></script>
+
+</html>
