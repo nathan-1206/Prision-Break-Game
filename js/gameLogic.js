@@ -1,13 +1,5 @@
 
 
-
-//MAKE SURE KEYS ARE LOWERCASE
-//const flowChart = {"start" : {"prompt": "You are in your cell and a guard walks by", "choices": ["do nothing", "grab your weapon", "wake up your cellmate"]},
-//                  "do nothing" : {"prompt": "The guard notices your weapon", "choices": ["drop your weapon", "attack", "scream for help"]}, 
-//                  "grab your weapon" : {"prompt": "The guard notices your weapon", "choices": ["drop your weapon", "attack", "scream for help"]}, 
-//                  "attack": {"prompt": "The guard gets knocked out", "choices": ["run towards the light", "alert other cellmates", "retrieve"]}
-//               };
-
 const flowChart = {"start" : {"prompt": "You wake up in your cell. It is early in the morning, and you walk towards the cell door to discover it is unlocked.", "choices": ["run", "leave                                  it alone", "let your cell mate know"]},
                                       
                    "let your cell mate know": {"prompt": "Your cell mate appreciates letting him know, and he suggests waiting until the coast is clear.", "choices": ["hide in supply closet", "jump guard", "head down main corridor"]},
