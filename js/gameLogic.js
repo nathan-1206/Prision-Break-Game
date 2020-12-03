@@ -1,16 +1,8 @@
 
 
-
-//MAKE SURE KEYS ARE LOWERCASE
-//const flowChart = {"start" : {"prompt": "You are in your cell and a guard walks by", "choices": ["do nothing", "grab your weapon", "wake up your cellmate"]},
-//                  "do nothing" : {"prompt": "The guard notices your weapon", "choices": ["drop your weapon", "attack", "scream for help"]}, 
-//                  "grab your weapon" : {"prompt": "The guard notices your weapon", "choices": ["drop your weapon", "attack", "scream for help"]}, 
-//                  "attack": {"prompt": "The guard gets knocked out", "choices": ["run towards the light", "alert other cellmates", "retrieve"]}
-//               };
-
 const flowChart = {"start" : {"prompt": "You wake up in your cell. It is early in the morning, and you walk towards the cell door to discover it is unlocked.", "choices": ["run", "leave                                  it alone", "let your cell mate know"]},
                                       
-                   "let your cell mate know": {"prompt": "Your cell mate appreciates letting him know, and he suggests waiting until the coast is clear."},
+                   "let your cell mate know": {"prompt": "Your cell mate appreciates letting him know, and he suggests waiting until the coast is clear.", "choices": ["hide in supply closet", "jump guard", "head down main corridor"]},
                    
                    "leave it alone": {"prompt": "You wait until there are no guards nearby and leave your cell. What do you do?", "choices": ["hide in supply closet", "jump guard", "head down main corridor"]},
                    
@@ -87,16 +79,12 @@ function displayDeath(deathText) {
 function gameLogic(choice) {
   console.log(choice);
   //MAKE SURE PHRASES ARE LOWERCASE
-  const victoryPhrases = ["run towards the light"]
+  const victoryPhrases = ["run towards the light", "hide in closet", "steal uniform", "open all cells"]
   //const victoryPhrases = ["hide in closet"] - You go and hide in the closet and find a crack in the wall from the mold of the old food. You begin to chip away and eventually find that the other side of the wall is the outside.
   //const victoryPhrases = ["steal uniform"] - You quickly change and put on the uniform. You walk out of the office and down the hall right out the door.
   //const victoryPhrases = ["open all cells"] - You open all the cells and the alarm goes off. You expect guards to rush in but you see the prisoners starting a riot. It is too much for the guards to handle and you slip away in the midst of the chaos.
   
-  const deathPhrases = {"run": "You make a break for it down the hallway just to get tackled from behind by a guard. Refresh to restart."};
-  //const deathPhrases = {"steal food": "You open the fridge and begin to eat the food but you are too noisy and the chef comes and catches you."};        
-  //const deathPhrases = {"steal utensil": "You open the utensil drawer to find something to use as a tool, but are too noisy and the chef comes in and catches you."};    
-  //const deathPhrases = {"find different hallway": "You turn the corner to walk straight into a pair of guards."};    
-  //const deathPhrases = {"disable cams": "You disable the security cameras and immediately the alarm goes off. Guards rush into the office and you are caught red-handed."};   
+  const deathPhrases = {"run": "You make a break for it down the hallway just to get tackled from behind by a guard. Refresh to restart.", "steal food": "You open the fridge and begin to eat the food but you are too noisy and the chef comes and catches you. Refresh to restart.","steal utensil": "You open the utensil drawer to find something to use as a tool, but are too noisy and the chef comes in and catches you. Refresh to restart.", "find different hallway": "You turn the corner to walk straight into a pair of guards. Refresh to restart.","disable cams": "You disable the security cameras and immediately the alarm goes off. Guards rush into the office and you are caught red-handed. Refresh to restart."};
     
   var txt = document.getElementById(choice).innerText.toLowerCase();
   if (victoryPhrases.includes(txt)) {
