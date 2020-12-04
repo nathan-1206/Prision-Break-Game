@@ -27,24 +27,31 @@
                     <button id="choice1" class="uk-button uk-button-default uk-margin-bottom"></button>
                     <button id="choice2" class="uk-button uk-button-default"></button>
                     <button id="choice3" class="uk-button uk-button-default uk-margin-top"></button>
+                    <img id="gifHolder" data-src="" alt="" uk-img> <!-- add width and height if you want, might be spacing problems-->
                 </div>
             </div>
-        
         </div>
 
 
         <div id="endingText" class="uk-cover-container uk-padding-remove uk-background-muted uk-height-viewport uk-hidden">
-            <div class="uk-text-lead uk-position-center">
-                Congrats, you won!
+            <div class="uk-flex uk-flex-column uk-position-center">
+                <div class="uk-text-lead uk-text-center uk-margin-bottom">
+                    Congrats, you won!
+                </div>
+                <!-- Winning Gif Here if there in none comment out this line -->
+                <img data-src="images/Test_image.jpg" width="" height="" alt="" uk-img> <!-- Specify width and height if it looks strange-->
             </div>
         </div>
 
         <div id="death" class="uk-cover-container uk-padding-remove uk-background-muted uk-height-viewport uk-hidden">
-            <div id="deathtext" class="uk-text-lead uk-position-center">
-                The guard shot you, refresh the page to start over.
-            </div>
+                <div class="uk-flex uk-flex-column uk-position-center">
+                    <div id="deathtext" class="uk-text-lead uk-text-center uk-margin-bottom">
+                        The guard shot you, refresh the page to start over.
+                    </div>
+                    <!-- Death Gif Here -->
+                    <img data-src="images/Test_image.jpg" width="" height="" alt="" uk-img> <!-- Specify width and height if it looks strange-->
+                </div>
         </div>
-
 
     </body>
     <script src="js/gameLogic.js"></script>
