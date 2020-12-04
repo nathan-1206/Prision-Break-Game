@@ -1,6 +1,6 @@
 
 
-const flowChart = {"start" : {"prompt": "You wake up in your cell. It is early in the morning, and you walk towards the cell door to discover it is unlocked.", "choices": ["run", "leave it alone", "let your cell mate know"]},
+const flowChart = {"start" : {"prompt": "You wake up in your cell. It is early in the morning, and you walk towards the cell door to discover it is unlocked.", "choices": ["run", "leave it alone", "let your cell mate know"], "gif": "images/Test_image.jpg" /**test image here */}, // if you dont include the gif key, nothing will show up
                                       
                    "let your cell mate know": {"prompt": "Your cell mate appreciates letting him know, and he suggests waiting until the coast is clear.", "choices": ["hide in supply closet", "jump guard", "head down main corridor"]},
                    
@@ -61,6 +61,13 @@ function updateCard(promptChoiceMap) {
       document.getElementById("choice3").innerHTML = promptChoiceMap.choices[2];
     } else {
       document.getElementById("choice3").classList.add("uk-hidden");
+    }
+
+    if ("gif" in promptChoiceMap) {
+      document.getElementById("gifHolder").classList.remove("uk-hidden");
+      document.getElementById("gifHolder").setAttribute("data-src", promptChoiceMap.gif);
+    } else {
+      document.getElementById("gifHolder").classList.add("uk-hidden");
     }
 
 }
