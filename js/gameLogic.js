@@ -1,28 +1,28 @@
 
 
-const flowChart = {"start" : {"prompt": "You wake up in your cell. It is early in the morning, and you walk towards the cell door to discover it is unlocked.", "choices": ["run", "leave it alone", "let your cell mate know"], "gif": "images/Test_image.jpg" /**test image here */}, // if you dont include the gif key, nothing will show up
+const flowChart = {"start" : {"prompt": "You wake up in your cell. It is early in the morning, and you walk towards the cell door to discover it is unlocked.", "choices": ["run", "leave it alone", "let your cell mate know"]}, // if you dont include the gif key, nothing will show up
                                       
                    "let your cell mate know": {"prompt": "Your cell mate appreciates letting him know, and he suggests waiting until the coast is clear.", "choices": ["hide in supply closet", "jump guard", "head down main corridor"]},
                    
                    "leave it alone": {"prompt": "You wait until there are no guards nearby and leave your cell. What do you do?", "choices": ["hide in supply closet", "jump guard", "head down main corridor"]},
                    
-                   "hide in supply closet": {"prompt": "You escape to the supply closet and find some itmes. But you can only carry one. Which do you choose?", "choices": ["take weapon", "take walkie-walkies"]},
+                   "hide in supply closet": {"prompt": "You escape to the supply closet and find some items. But you can only carry one. Which do you choose?", "choices": ["take weapon", "take walkie-talkie"], "gif": "images/walkingOutDoor"},
                    
-                   "jump guard": {"prompt": "You catch the guard by surprise and are able to fight him off.", "choices": ["take weapon", "go to warden's office"]},
+                   "jump guard": {"prompt": "You catch the guard by surprise and are able to fight him off.", "choices": ["take weapon", "go to warden's office"], "gif": "images/deathSkull"},
                    
-                   "go to warden's office": {"prompt": "You walk in to the warden's office to find it empty. What do you do?", "choices": ["steal uniform", "steal keys"]},
+                   "go to warden's office": {"prompt": "You walk in to the warden's office to find it empty. What do you do?", "choices": ["steal uniform", "steal keys"], "gif": "images/walkingOutDoor"},
                    
-                   "head down main corridor": {"prompt": "You sneakily walk down the main corridor and find a fork in the hallway.", "choices": ["go to warden's office", "go to mess hall", "go to security office"]},
+                   "head down main corridor": {"prompt": "You sneakily walk down the main corridor and find a fork in the hallway.", "choices": ["go to warden's office", "go to mess hall", "go to security office"], "gif": "images/walkingOutDoor"},
                    
-                   "go to mess hall": {"prompt": "You arrive in the empty mess hall.", "choices": ["steal food", "steal utensil", "hide in closet"]},
+                   "go to mess hall": {"prompt": "You arrive in the empty mess hall.", "choices": ["steal food", "steal utensil", "hide in closet"], "gif": "images/walkingOutDoor"},
                    
                    "take weapon": {"prompt": "Weapon in hand, you see a guard down the hall.", "choices": ["attack guard", "find different hallway"]},
                    
-                   "take walkie-talkie": {"prompt": "You go back to your cell to give your cell mate the other walkie talkie. He thanks you and suggests going to the warden's office. You follow his instructions and find that the warden's office is empty.", "choices": ["steal uniform", "steal keys"]},
+                   "take walkie-talkie": {"prompt": "You go back to your cell to give your cell mate the other walkie talkie. You both head to the wardens office", "choices": ["steal uniform", "steal keys"]},
 
-                   "attack guard": {"prompt": "You successfully fight off the guard and head see that the warden's office is straight ahead. Boldy you step in. It is empty. What do you do?", "choices": ["steal uniform", "steal keys"]},
+                   "attack guard": {"prompt": "You successfully fight off the guard and head see that the warden's office is straight ahead. Boldy you step in. It is empty. What do you do?", "choices": ["steal uniform", "steal keys"], "gif": "images/deathSkull"},
                    
-                   "steal keys": {"prompt": "You steal the keys and unlock the door to the security office. It is empty.", "choices": ["disable cams", "open all cells", "call cell mate on walkie-talkie"]}, 
+                   "steal keys": {"prompt": "You steal the keys and unlock the door to the security office. It is empty.", "choices": ["disable cams", "open all cells", "call cell mate on walkie-talkie"], "gif":"images/key.gif"}
                                                          
                 };
 
