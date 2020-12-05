@@ -6,7 +6,7 @@ const flowChart = {"start" : {"prompt": "You wake up in your cell. It is early i
                    
                    "leave it alone": {"prompt": "You wait until there are no guards nearby and leave your cell. What do you do?", "choices": ["hide in supply closet", "jump guard", "head down main corridor"]},
                    
-                   "hide in supply closet": {"prompt": "You escape to the supply closet and find some itmes. But you can only carry one. Which do you choose?", "choices": ["take weapon", "take walkie-walkies"]},
+                   "hide in supply closet": {"prompt": "You escape to the supply closet and find some itmes. But you can only carry one. Which do you choose?", "choices": ["take weapon", "take walkie-talkies"]},
                    
                    "jump guard": {"prompt": "You catch the guard by surprise and are able to fight him off.", "choices": ["take weapon", "go to warden's office"]},
                    
@@ -18,11 +18,11 @@ const flowChart = {"start" : {"prompt": "You wake up in your cell. It is early i
                    
                    "take weapon": {"prompt": "Weapon in hand, you see a guard down the hall.", "choices": ["attack guard", "find different hallway"]},
                    
-                   "take walkie-talkie": {"prompt": "You go back to your cell to give your cell mate the other walkie talkie. He thanks you and suggests going to the warden's office. You follow his instructions and find that the warden's office is empty.", "choices": ["steal uniform", "steal keys"]},
+                   "take walkie-talkies": {"prompt": "You go back to your cell to give your cell mate the other walkie talkie. He thanks you and suggests going to the warden's office. You follow his instructions and find that the warden's office is empty.", "choices": ["steal uniform", "steal keys"]},
 
                    "attack guard": {"prompt": "You successfully fight off the guard and head see that the warden's office is straight ahead. Boldy you step in. It is empty. What do you do?", "choices": ["steal uniform", "steal keys"]},
                    
-                   "steal keys": {"prompt": "You steal the keys and unlock the door to the security office. It is empty.", "choices": ["disable cams", "open all cells", "call cell mate on walkie-talkie"]}, 
+                   "steal keys": {"prompt": "You steal the keys and unlock the door to the security office. It is empty.", "choices": ["disable cams", "open all cells", "call cell mate on walkie-talkies"]}, 
                                                          
                 };
 
