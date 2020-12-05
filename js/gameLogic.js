@@ -117,7 +117,3 @@ document.getElementById("choice3").addEventListener("click", function(e) {
   gameLogic("choice3");
 });
 
-
-
-// Set up the spots for the image
-// Set the background
